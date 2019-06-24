@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.160pointcourse.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\cobre\\160PointCourse\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "160PointCourse [Testing]"
+        }
+      }
+    }
+  ]
+}

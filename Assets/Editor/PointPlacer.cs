@@ -23,10 +23,6 @@ public class PointPlacer : Editor
             {
                 GUIUtility.hotControl = controlID;
             
-                Debug.Log("Mouse down");
-
-                //CheckForPositions(e.mousePosition);
-                //ay ray =  Camera.current.ScreenPointToRay(e.mousePosition);
                 Ray ray = HandleUtility.GUIPointToWorldRay(e.mousePosition);
                 RaycastHit hit;
                 if(Physics.Raycast(ray, out hit, 100f))
@@ -44,6 +40,9 @@ public class PointPlacer : Editor
 
                     point.name += "(" + n + ")";
                     point.transform.parent = placer.transform;
+
+                    ConsumableWaypoint currentWaypoint = point.GetComponent<ConsumableWaypoint>();
+                    currentWaypoint.parentPlacer = placer;
                 }
                 
 

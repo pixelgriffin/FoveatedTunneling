@@ -38,6 +38,8 @@ public class PointPlacer : Editor
                         point.transform.position = previous.position + dir * placer.distanceBetweenPoints;
                     }
 
+                    point.transform.position += Vector3.up * placer.yChange;
+
                     point.name += "(" + n + ")";
                     point.transform.parent = placer.transform;
 
